@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-if [ "$@" == "nginx -g daemon off;" ]; then
+if [ "$1" == "nginx" ]; then
   IFS=',' read -ra TPLS <<< "$TEMPLATES"
   for i in "${TPLS[@]}"; do
     template=${i//_/-}
@@ -17,4 +17,4 @@ if [ "$@" == "nginx -g daemon off;" ]; then
   done
 fi
 
-echo "$@"
+exec "$@"
