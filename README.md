@@ -10,6 +10,16 @@ Collection of [NGINX](https://hub.docker.com/r/library/nginx/) templates for env
 $ docker pull joshuamarquez/dyn-nginx
 ```
 
+## Usage
+
+You need to specify template names separated by comma in `TEMPLATES` environment variable.
+
+### Example
+
+```
+TEMPLATES=TEMPLATE_01,TEMPLATE_02
+```
+
 ## Templates
 
 **Node.js with Socket.IO**
@@ -20,12 +30,8 @@ This template ha special [configuration](https://www.nginx.com/blog/nginx-nodejs
 
 Environment variables
 
-* `NODE_JS_SOCKET_IO_PORT` - Port to listen inside container, e.g. `3000`.
+* `NODE_JS_SOCKET_IO_PORT` - Port to listen inside container, e.g. `80`.
 * `NODE_JS_SOCKET_IO_TARGET`: Target name, e.g. `example.com:8080`.
-
-## Usage
-
-You need to specify template names separated by commas in `TEMPLATES` environment variable.
 
 ### Example
 
@@ -35,7 +41,7 @@ First set env vars in `.env` file.
 
 ```
 TEMPLATES=NODE_JS_SOCKET_IO
-NODE_JS_SOCKET_IO_PORT=3000
+NODE_JS_SOCKET_IO_PORT=80
 NODE_JS_SOCKET_IO_TARGET=example.com:8080
 ```
 
@@ -44,3 +50,7 @@ Then run `dyn-nginx`.
 ```bash
 $ docker run --rm --env-file .env joshuamarquez/dyn-nginx
 ```
+
+## Notes
+
+* All `/etc/nginx/conf.d/*.conf` files are removed before inserting `template.conf` files.
