@@ -9,7 +9,7 @@ if [ "$1" == "nginx" ]; then
     template=${template,,}
 
     if [ -f "/templates/${template}.template" ]; then
-      envsubst < /templates/${template}.template > /etc/nginx/conf.d/$template.conf
+      envsubst "$(</templates/${template}.list)" < /templates/${template}.template > /etc/nginx/conf.d/$template.conf
       echo "Template ${template} applied!"
     else
       echo "Invalid template ${template}!"
