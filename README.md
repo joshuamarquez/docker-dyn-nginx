@@ -1,6 +1,6 @@
 # docker-dyn-nginx
 
-[![](https://images.microbadger.com/badges/version/joshuamarquez/dyn-nginx:0.1.0.svg)](https://microbadger.com/images/joshuamarquez/dyn-nginx:0.1.0 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/joshuamarquez/dyn-nginx:0.1.0.svg)](https://microbadger.com/images/joshuamarquez/dyn-nginx:0.1.0 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/joshuamarquez/dyn-nginx:0.2.0.svg)](https://microbadger.com/images/joshuamarquez/dyn-nginx:0.2.0 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/joshuamarquez/dyn-nginx:0.2.0.svg)](https://microbadger.com/images/joshuamarquez/dyn-nginx:0.2.0 "Get your own image badge on microbadger.com")
 
 Collection of [NGINX](https://hub.docker.com/r/library/nginx/) templates for env var substitution.
 
