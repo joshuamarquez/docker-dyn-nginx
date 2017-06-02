@@ -6,7 +6,7 @@ server {
     listen ${MINIO_PORT};
 
     access_log /var/log/nginx/minio_access.log;
-    error_log var/log/nginx/minio_error.log;
+    error_log /var/log/nginx/minio_error.log;
 
     location = /healthcheck {
         access_log off;
@@ -29,3 +29,5 @@ server {
         proxy_redirect off;
     }
 }
+
+# https://docs.minio.io/docs/setup-nginx-proxy-with-minio
