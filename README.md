@@ -33,20 +33,6 @@ Environment variables
 * `NODE_JS_SOCKET_IO_PORT` - Port to listen inside container, e.g. `80`.
 * `NODE_JS_SOCKET_IO_TARGET`: Target name, e.g. `example.com:8080`.
 
-
-
-### Example
-
-In the example below we will use template `NODE_JS_SOCKET_IO`.
-
-First set env vars in `.env` file.
-
-```
-TEMPLATES=NODE_JS_SOCKET_IO
-NODE_JS_SOCKET_IO_PORT=80
-NODE_JS_SOCKET_IO_TARGET=example.com:8080
-```
-
 **Minio**
 
 Template name: `MINIO`
@@ -60,12 +46,12 @@ Environment variables
 
 ### Example
 
-In the example below we will use template `MINIO`.
+In the example below we will use template `NODE_JS_SOCKET_IO`.
 
 First set env vars in `.env` file.
 
 ```
-TEMPLATES=MINIO
+TEMPLATES=NODE_JS_SOCKET_IO
 NODE_JS_SOCKET_IO_PORT=80
 NODE_JS_SOCKET_IO_TARGET=example.com:8080
 ```
