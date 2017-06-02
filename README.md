@@ -33,6 +33,8 @@ Environment variables
 * `NODE_JS_SOCKET_IO_PORT` - Port to listen inside container, e.g. `80`.
 * `NODE_JS_SOCKET_IO_TARGET`: Target name, e.g. `example.com:8080`.
 
+
+
 ### Example
 
 In the example below we will use template `NODE_JS_SOCKET_IO`.
@@ -41,6 +43,29 @@ First set env vars in `.env` file.
 
 ```
 TEMPLATES=NODE_JS_SOCKET_IO
+NODE_JS_SOCKET_IO_PORT=80
+NODE_JS_SOCKET_IO_TARGET=example.com:8080
+```
+
+**Minio**
+
+Template name: `MINIO`
+
+This template ha special [configuration](https://docs.minio.io/docs/setup-nginx-proxy-with-minio) for Minio.
+
+Environment variables
+
+* `MINIO_PORT` - Port to listen inside container, e.g. `80`.
+* `MINIO_TARGET`: Target name, e.g. `example.com:8080`.
+
+### Example
+
+In the example below we will use template `MINIO`.
+
+First set env vars in `.env` file.
+
+```
+TEMPLATES=MINIO
 NODE_JS_SOCKET_IO_PORT=80
 NODE_JS_SOCKET_IO_TARGET=example.com:8080
 ```
